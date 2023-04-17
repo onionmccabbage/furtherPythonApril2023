@@ -17,8 +17,8 @@ Monday
 > decorator pattern (using @)
 > command pattern
 - proxy pattern
-- observables and subscribers
 - after lunch review exercise
+- observables and subscribers
 - we will need Jupyter later in the week
 
 Tuesday

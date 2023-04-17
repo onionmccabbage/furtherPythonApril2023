@@ -1,13 +1,15 @@
-Beyond Advanced Python Review Exercise 1
+Beyond Advanced Python Review Exercise 1 (about 50-60 minutes)
 ========================================
 Individually or in groups, tackle as many of these challenges as you like, in any order
 There will be a chance to show your thinking after the exercise
 
 Proxy Pattern
-- Continue with the proxy example, to implement another 'payment' proxy, such as a pre-paid foreign currency card
+- Continue with the proxy example, to implement another 'payment' proxy, 
+  such as a pre-paid foreign currency card
 
 Decorator Pattern
 - Write a decorator function that ensures all positional arguments are non-empty string
+- expand this for other kinds of validation, and for keyword args
 
 Facade and Factory patterns
 - re-write the creature factory as a facade to all the creatures
