@@ -1,3 +1,67 @@
-Further Advaned Python - April 2023
+Further Advanced Python - April 2023
+====================================
 
 Toby Dussek
+
+9:30
+11:00
+12:30
+3:00
+4:30
+
+Monday
+- welcome
+- we will be installing additional packages as needed
+- design patterns (and anti-patterns)
+- factory and facade patterns
+- decorator pattern (using @)
+- command pattern
+- proxy pattern
+- observables and subscribers
+- after lunch review exercise
+
+Tuesday
+- state pattern
+- RxPY
+- concurrency and parallel code
+- overview: thread functions and thread classes
+- thread locks/rlocks/semaphores
+- after lunch review exercise
+
+Wednesday
+- @ decorator to make classes and methods thread safe (using Lock)
+- multiprocessing
+- performance and timing
+- profiling
+- after lunch review exercise
+- async await and coroutines
+- prepare for Thursday ...
+
+Thursday
+- Python for Data Analysis
+  data sources (csv, xlsx, text, db, url...)
+- using Jupyter notebooks (via Jupyter, Anaconda, via VS Code plugin, or online or...)
+   you can 'pip install jupyter' then start it with 'python -m notebook'
+   then you will also need to pip isntall numpy, pandas etc.
+- numpy and data structures: the arange and array 
+- pandas: series and data-frame
+- data vizualisation with matplotlib
+- data cleansing and preparation
+- descriptive statistics
+- after lunch review exercise
+
+Friday
+- review of microservices
+- Flask
+- after lunch review exercise
+- end of course feedback
+
+where to go next
+   https://www.geeksforgeeks.org/python-design-patterns/
+   https://python-patterns.guide/
+   https://rxpy.readthedocs.io/en/latest/ 
+   https://pypi.org/project/memory-profiler/
+
+https://pynative.com/python-exercises-with-solutions/
+https://www.geeksforgeeks.org/python-exercises-practice-questions-and-solutions/
+https://www.practicepython.org/exercises/
