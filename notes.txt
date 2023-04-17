@@ -16,8 +16,8 @@ Monday
 > factory and facade patterns
 > decorator pattern (using @)
 > command pattern
-- proxy pattern
-- after lunch review exercise
+> proxy pattern
+> after lunch review exercise
 - observables and subscribers
 - we will need Jupyter later in the week
 
