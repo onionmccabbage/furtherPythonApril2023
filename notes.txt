@@ -10,10 +10,10 @@ Toby Dussek
 4:30
 
 Monday
-- welcome
+> welcome
 - we will be installing additional packages as needed
 - design patterns (and anti-patterns)
-- factory and facade patterns
+> factory and facade patterns
 - decorator pattern (using @)
 - command pattern
 - proxy pattern
