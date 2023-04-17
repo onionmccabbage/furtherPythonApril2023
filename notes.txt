@@ -18,7 +18,8 @@ Monday
 > command pattern
 > proxy pattern
 > after lunch review exercise
-- observables and subscribers
+- resolve issue around decorator non-empty string
+> observables and subscribers
 - we will need Jupyter later in the week
 
 Tuesday
@@ -43,7 +44,7 @@ Thursday
   data sources (csv, xlsx, text, db, url...)
 - using Jupyter notebooks (via Jupyter, Anaconda, via VS Code plugin, or online or...)
    you can 'pip install jupyter' then start it with 'python -m notebook'
-   then you will also need to pip isntall numpy, pandas etc.
+   then you will also need to pip install numpy, pandas etc.
 - numpy and data structures: the arange and array 
 - pandas: series and data-frame
 - data vizualisation with matplotlib
