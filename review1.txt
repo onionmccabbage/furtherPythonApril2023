@@ -1,0 +1,19 @@
+Beyond Advanced Python Review Exercise 1
+========================================
+Individually or in groups, tackle as many of these challenges as you like, in any order
+There will be a chance to show your thinking after the exercise
+
+Proxy Pattern
+- Continue with the proxy example, to implement another 'payment' proxy, such as a pre-paid foreign currency card
+
+Decorator Pattern
+- Write a decorator function that ensures all positional arguments are non-empty string
+
+Facade and Factory patterns
+- re-write the creature factory as a facade to all the creatures
+- consider if the 'Manager' facade could be sensibly implemented as a factory
+
+Command Pattern
+- A stock can be 'shorted' (as well as buy/sell). Implement the basics of a 'short' command
+- You could add a random feature for how much profit/loss a short stock makes
+

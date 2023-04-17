@@ -11,7 +11,7 @@ class Bank(Payment):
         self.account = self.card
         return self.account
     def __hasFunds(self):
-        print(f'Bank is checking if {self.__getAccount} has funds')
+        print(f'Bank is checking if {self.__getAccount() } has funds')
         # randomly decide...
         return bool(random.getrandbits(1)) # True or False
     def do_pay(self):
