@@ -14,7 +14,7 @@ Monday
 - we will be installing additional packages as needed
 - design patterns (and anti-patterns)
 > factory and facade patterns
-- decorator pattern (using @)
+> decorator pattern (using @)
 - command pattern
 - proxy pattern
 - observables and subscribers
