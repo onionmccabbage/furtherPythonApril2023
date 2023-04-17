@@ -19,6 +19,7 @@ Monday
 - proxy pattern
 - observables and subscribers
 - after lunch review exercise
+- we will need Jupyter later in the week
 
 Tuesday
 - state pattern
