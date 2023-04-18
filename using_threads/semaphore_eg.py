@@ -32,10 +32,10 @@ class TicketSeller(threading.Thread):
         time.sleep(random.randint(0,4)/16) # 0, 0.25, 0.5 or 0.75 seconds
 
 def main():
-    '''provide a semaphore then a bunch of tixket seller instances'''
-    sem = threading.Semaphore()
+    '''provide a semaphore then a bunch of ticket seller instances'''
+    sem = threading.Semaphore(4) # how many concurrent access will we allow
     sellers = []
-    for i in range(0,4):
+    for i in range(0,16):
         seller = TicketSeller(sem) # all the threads share the one semaphore
         sellers.append(seller)
         seller.start()
