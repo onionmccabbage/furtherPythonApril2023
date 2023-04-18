@@ -17,3 +17,5 @@ if __name__ == '__main__':
     d.setDaemon(True) # now that thread will run continuously
     s.start()
     d.start()
+    s.join()
+    d.join() # careful - the daemon will NEVER end, so you must terminate the main thread

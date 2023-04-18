@@ -1,0 +1,51 @@
+Python Further Advanced Review Exercise 2
+=========================================
+For this project, use modules and imports to separate your code structures
+In a new Python module, declare a 'WeatherGetter' class which inherits from the Thread class.
+Initialize it to take a 'city' parameter. Declare a 'run' method for this class.
+
+You will need something like this at the top of your module:
+  from threading import Thread
+  import requests
+  import time
+
+In the 'run' method, populate a response object by calling 'requests.get' for this end-point:
+  http://api.openweathermap.org/data/2.5/weather?q=athlone&units=metric&APPID=48f2d5e18b0d2bc50519b58cce6409f1
+  (replace 'athlone' with the city parameter)
+  (You may choose to sign up for a free API key, or use my API key, good for 60 req/min)
+Populate a 'data' object from the response as JSON, then set self.temperature to the returned temperature, e.g.
+  data = json.loads(response.text) 	   # convert the returned reponse to JSON
+  self.temperature = data['main']['temp']  # access the temperature property from the JSON
+(You could also read the weather description, wind speed and direction)
+
+Declare a list of cities, e.g. 
+  CITIES = ['Athlone', 'Dublin', 'Galway', 'Belfast', 'London', 'Cork', 'Lund', 'Kista']
+Iterate over these cities, starting a new thread for your 'WeatherGetter' for each city
+
+There is no need to use observables for this (unless you would like to)
+
+Print out the temperature for each of the cities
+Optionaly include code to time how long it takes to retrieve all the weather reports
+Remember to code against the main types of error that might occur here
+
+If Time
+------- 
+Use a semaphore, since the weather service can certainly handle more than one request at a time
+Declare a data structure to record each city and temperature, along with a time-stamp
+Each thread should add to this structure, using locks as needed (enter nulls on error)
+When all threads complete, persist the contents of this structure to a text file (overwrite each time)
+Subsequent runs of your code should first read this file, then calculate (and display) any temperature difference between the current and previous values
+Over short time scales, this temperature difference will often be zero
+
+Optional
+--------
+Also show other weather data, such as wind speed and direction, the weather description etc.
+Show the temperature as Celcius (the default), Kelvin (-273) and Fahrenheit (°F=°C*1.8+32.0)
+
+Try retrieving a lot of cities (but be careful of the 60-a-minute limit):
+Here is a list of many of the cities of Ireland:
+["Dublin","Cork","Limerick","Galway","Waterford","Drogheda","Kilkenny","Wexford","Sligo","Clonmel","Dundalk","Bray","Ennis","Tralee","Carlow","Naas","Athlone","Letterkenny","Tullamore","Killarney","Arklow","Cobh","Castlebar","Midleton","Mallow","Ballina","Enniscorthy","Wicklow","Cavan","Athenry","Longford","Dungarvan","Nenagh","Trim","Thurles","Youghal","Monaghan","Buncrana","Ballinasloe","Fermoy","Westport","Carrick-on-Suir","Birr","Tipperary","Carrickmacross","Kinsale","Listowel","Clonakilty","Cashel","Macroom","Castleblayney","Kilrush","Skibbereen","Bundoran","Templemore","Clones","Newbridge","Mullingar","Balbriggan","Greystones","Leixlip","Tramore","Shannon","Gorey","Tuam","Edenderry","Bandon","Loughrea","Ardee","Mountmellick","Bantry","Boyle","Ballyshannon","Cootehill","Ballybay","Belturbet","Lismore","Kilkee","Granard"]
+
+If Time
+-------
+Use the 'lon' and 'lat' values to store retrieved weather data as a text file including 'lon' and 'lat'
