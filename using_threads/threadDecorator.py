@@ -1,13 +1,20 @@
 # we can write decorators to apply to any function and make it thread-safe
 from threading import Lock
 
+lock = Lock()
+
 def lock_a_method(meth):
     '''this can be used to decorate any methopd that needs to be thread safe (i.e. use locks)'''
     if getattr(meth, '__is_locked', False):
         raise TypeError(f'Method {meth} is already locked')
     def locked_method(self, *args, **kwargs):
-        with self.__lock: # 'with' will release the lock when done
-            return meth(self, *args, **kwargs)
+        # we cannot use 'with' since Lock does not implement __enter__ or __exit__
+        # with self.__lock: # 'with' will release the lock when done
+        #     return meth(self, *args, **kwargs)
+        lock.acquire()
+        result = meth(self, *args, **kwargs)
+        lock.release()
+        return result
     lock_a_method.__name__ = f'Locked Method {meth.__name__}'
     locked_method.__is_locked = True
     return locked_method
@@ -34,7 +41,7 @@ def lock_a_class(method_names, lock_factory):
 @lock_a_class(['add', 'remove'], Lock)
 class MyClass(set): # here our class inherits from the 'set' class
     def __init__(self, new_set): # since we extend the 'set' class, we need to provide a set
-        pass
+        set.__init__(self, new_set) # call the initializer of the 'set' class
     @lock_a_method # here we apply a decorator to make this method thread-safe
     def someMethod(self):
         print(f'Here is an arbitrary method')
@@ -47,8 +54,9 @@ if __name__ == '__main__':
     ''''''
     initial_set = {4,3,2}
     s = MyClass(initial_set)
-    # s.add('apples')
-    # s.remove(4)
+    s.add('apples')
+    s.remove(4)
+    print(s)
     # see if 'someMethod' is locked
     print(s.someMethod.__is_locked) # True
     print(s.add.__is_locked) # True
