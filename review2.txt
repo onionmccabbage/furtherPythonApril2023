@@ -1,8 +1,10 @@
 Python Further Advanced Review Exercise 2
 =========================================
 For this project, use modules and imports to separate your code structures
-In a new Python module, declare a 'WeatherGetter' class which inherits from the Thread class.
-Initialize it to take a 'city' parameter. Declare a 'run' method for this class.
+In a new Python module, declare a 'WeatherGetter' class which inherits 
+from the Thread class.
+Initialize it to take a 'city' parameter. 
+Declare a 'run' method for this class.
 
 You will need something like this at the top of your module:
   from threading import Thread
@@ -10,7 +12,7 @@ You will need something like this at the top of your module:
   import time
 
 In the 'run' method, populate a response object by calling 'requests.get' for this end-point:
-  http://api.openweathermap.org/data/2.5/weather?q=athlone&units=metric&APPID=48f2d5e18b0d2bc50519b58cce6409f1
+  http://api.openweathermap.org/data/2.5/weather?q=athlone&units=metric&APPID=957d663a2296945e39a56609740a2548
   (replace 'athlone' with the city parameter)
   (You may choose to sign up for a free API key, or use my API key, good for 60 req/min)
 Populate a 'data' object from the response as JSON, then set self.temperature to the returned temperature, e.g.

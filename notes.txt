@@ -12,7 +12,7 @@ Toby Dussek
 Monday
 > welcome
 - we will be installing additional packages as needed
-- design patterns (and anti-patterns)
+> design patterns (and anti-patterns)
 > factory and facade patterns
 > decorator pattern (using @)
 > command pattern
@@ -22,13 +22,15 @@ Monday
 > we will need Jupyter later in the week
 
 Tuesday
-> where we got to - summary of design patterns 
+> where we got to - summary of design patterns
 > state pattern
-- RxPY
-- concurrency and parallel code
-- overview: thread functions and thread classes
-- thread locks/rlocks/semaphores
+> RxPY https://rxpy.readthedocs.io/en/latest/index.html
+       https://rxmarbles.com/
+> concurrency and parallel code
+> overview: thread functions and thread classes
+> thread locks/rlocks/semaphores
 - after lunch review exercise
+- thread decorator
 
 Wednesday
 - @ decorator to make classes and methods thread safe (using Lock)
