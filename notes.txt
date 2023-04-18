@@ -18,12 +18,12 @@ Monday
 > command pattern
 > proxy pattern
 > after lunch review exercise
-- resolve issue around decorator non-empty string
 > observables and subscribers
-- we will need Jupyter later in the week
+> we will need Jupyter later in the week
 
 Tuesday
-- state pattern
+> where we got to - summary of design patterns 
+> state pattern
 - RxPY
 - concurrency and parallel code
 - overview: thread functions and thread classes
