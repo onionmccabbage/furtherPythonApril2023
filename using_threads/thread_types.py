@@ -20,11 +20,13 @@ class SomeClass(Thread):
             print(self.name)
 
 if __name__ == '__main__':
+    # NB all these threads will run on ONE processor
     # we can make a function run on a new thread
     t1 = Thread(target=someFn, args=('thread 1',)) # NB the args MUST be a tuple
     t2 = Thread(target=someFn, args=('thread 2',)) # NB the args MUST be a tuple
     t3 = SomeClass('thread 3')
     t4 = SomeClass('thread 4')
+    # threads run at the same time, so many threads can be concurrent
     start = timeit.default_timer()
     t1.start() # here we start the new thread
     t2.start() # here we start the new thread
