@@ -3,7 +3,7 @@ import pstats
 
 def main():
     #read in the output file
-    p = pstats.Stats('out')
+    p = pstats.Stats('review2/weather_profile')
     # print the results
     p.print_stats()
 
