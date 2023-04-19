@@ -48,6 +48,11 @@ Wednesday
 
 Thursday
 - Python for Data Analysis
+  we will need:
+  - numpy
+  - pandas
+  - matplotlib
+	The easiest way to get all teh bits and bobs is to use Anaconda
   data sources (csv, xlsx, text, db, url...)
 - using Jupyter notebooks (via Jupyter, Anaconda, via VS Code plugin, or online or...)
    you can 'pip install jupyter' then start it with 'python -m notebook'
