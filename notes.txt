@@ -35,9 +35,9 @@ Tuesday
 Wednesday
 > where to get the recordings
 > final look at @ decorator to make classes and methods thread safe (using Lock)
-- multiprocessing
-  ps -eaf | grep python - equivalent for Windows???
-
+> multiprocessing
+  ps -eaf | grep python - equivalent for Windows??? (wsl)
+  Get-Process | Select-String -Pattern "python"
 - performance and timing
 - profiling
 - after lunch review exercise

@@ -1,3 +1,4 @@
+from memory_profiler import profile
 # the Observer pattern implements a publish-subscribe model
 
 # here is our publisher (also known as the observable)
@@ -11,6 +12,7 @@ from other_sub import OtherSubscriber
 # put them in a tuple
 subs = (MediaSubscriber, PrintSubscriber, EmailSubscriber, OtherSubscriber)
 
+@profile
 def main():
     '''iterate over all subscribers, notifying of fresh news'''
     news_publisher = NewsPublisher()

@@ -1,3 +1,4 @@
+from memory_profiler import profile
 from threading import Thread
 import json
 import requests
@@ -7,7 +8,7 @@ class TempGetter(Thread):
     def __init__(self, city):
         super().__init__()
         self.city = city
-
+    @profile
     def run(self):
         url_template = (
             'http://api.openweathermap.org/data/2.5/'
@@ -15,7 +16,7 @@ class TempGetter(Thread):
         response = requests.get(url_template.format(self.city))
         data = json.loads(response.text)
         self.temperature = data['main']['temp']
-        # lon = 0
-        # lat = 52
-        # r = requests.get('https://www.google.co.uk/maps/place/{},{}'.format(lon, lat))
+        lon = 0
+        lat = 52
+        r = requests.get('https://www.google.co.uk/maps/place/{},{}'.format(lon, lat))
         # print(r.text)

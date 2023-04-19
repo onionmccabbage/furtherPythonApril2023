@@ -3,7 +3,9 @@ from threading import Thread # NB Thread is a thread-access object (not an actua
 import time
 import random
 import timeit # this is the most accurate way to measure code run time
+from memory_profiler import profile
 
+@profile # this will report on the function 
 def someFn(name):
     '''this function wil simply sleep for a random time'''
     for i in range(0, 50):
@@ -14,6 +16,7 @@ class SomeClass(Thread):
     def __init__(self, name):
         Thread.__init__(self) # call the initializer on the Thread class
         self.name = name
+    @profile # this will report on the method of this class
     def run(self): # this can be called to run our thread
         for i in range(0,50):
             time.sleep(random.random()*0.1) # sleep for up to a tenth of a second

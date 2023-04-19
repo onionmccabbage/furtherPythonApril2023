@@ -2,9 +2,12 @@ import multiprocessing
 import os
 import time
 
+from memory_profiler import profile
+
 class MyProcess(multiprocessing.Process):
     def __init__(self):
         super(MyProcess, self).__init__()
+    @profile
     def run(self):
         time.sleep(2)
         print(f'Child process ID is {multiprocessing.current_process().pid}')
