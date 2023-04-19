@@ -29,12 +29,15 @@ Tuesday
 > concurrency and parallel code
 > overview: thread functions and thread classes
 > thread locks/rlocks/semaphores
-- after lunch review exercise
+> after lunch review exercise
 - thread decorator
 
 Wednesday
-- @ decorator to make classes and methods thread safe (using Lock)
+> where to get the recordings
+> final look at @ decorator to make classes and methods thread safe (using Lock)
 - multiprocessing
+  ps -eaf | grep python - equivalent for Windows???
+
 - performance and timing
 - profiling
 - after lunch review exercise
@@ -56,7 +59,7 @@ Thursday
 
 Friday
 - review of microservices
-- Flask
+- Flask: running as dev or prod server (performance and security)
 - after lunch review exercise
 - end of course feedback
 
