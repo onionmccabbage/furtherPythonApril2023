@@ -38,8 +38,8 @@ Wednesday
 > multiprocessing
   ps -eaf | grep python - equivalent for Windows??? (wsl)
   Get-Process | Select-String -Pattern "python"
-- performance and timing
-- profiling
+> performance and timing
+> profiling with @prfile and cProfile
 - after lunch review exercise
 - async await and coroutines
 - prepare for Thursday ...

@@ -1,0 +1,30 @@
+Review 3 - Profiling and Timing 
+===============================
+For this exercise, use any of the previous review exercises, or my solutions to those exercises,
+or write new code if you prefer. 
+Alternatively, revisit the 'thread' examples and write 'multiprocess' version of those examples
+NB don't expect a significant difference in speed using Threads or using Processes, 
+and in many cases, Threads is the only realistic way to go
+
+The most simple approach: go back to previous examples we wrote, and time/profile them
+Then see if there is any way to improve their performance
+
+For example:
+Gather some memory performance metrics for your existing code
+(use @profile to decorate some of your functions)
+Also measure how long parts of our code take (use timeit.default_timer)
+Take a baseline average for the code as it is now
+Experiment with alternative structures for some functions to see if their profile can be improved
+For example, use a 'city' generator compared to creating a list of cities
+Measure time (and profile) to see if there is any difference using multi-processing rather than multi-threading
+
+Optional Alternative
+--------------------
+Continue with the weather app from review 2 (your own or my code)
+Write a module called preparation.py which asks the user to enter some default values 
+(to be uses in the weather app)
+This module will provide values for cities, which metrics (temperature, wind-speed etc.) are required etc.
+(e.g. in a named tuple with sensible defaults)
+Persist these values in a simple text file
+When the weather app starts, read this configuration file and use the defaults
+Also explore passing the 'city' value in as sys.argv when you run your code
