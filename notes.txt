@@ -40,12 +40,11 @@ Wednesday
   Get-Process | Select-String -Pattern "python"
 > performance and timing
 > profiling with @profile and cProfile
-- after lunch review exercise
-- show-and-tell
-- async await and coroutines
-- why use a thread or a process???
+> after lunch review exercise
+> show-and-tell
+> why use a thread or a process???
+- generators, async await and coroutines
 - prepare for Thursday ...
-
 
 Thursday
 - Python for Data Analysis
