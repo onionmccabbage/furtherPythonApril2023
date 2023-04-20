@@ -1,0 +1,25 @@
+Review 4 (Data analysis)
+========================
+- read in external data into a data frame
+- show the description
+- show the dtypes
+- find the mean flight time
+‐ Group the data into separate data frames for each airline
+‐ Show the minimum and mean departure delay for each airline
+In the flights data set, find:
+‐ The number of flight records
+‐ The number of unique airlines
+‐ How many unique aircraft are represented
+‐ The greatest recorded delay (show the related data)
+‐ The mean values for just the first 50 records in the dataset, then for all delays of 15 or more units
+
+Consider how you can address the following challenges:
+‐ On average, which airline is the most punctual
+‐ Which airline arrives ahead of time most often
+‐ Does flight duration appear to affect arrival punctuality more for some airlines than others
+‐ Does time of day appear to affect departure punctuality across all flights
+‐ Are the standard deviations of flight duration close to the standard deviations of flight distance
+Optional
+Explore the datasets available at https://www.kaggle.com/datasets
+Sign up for free and download a few data sets to analyse
+e.g. find statistical relationships between wealth and life expectancy
