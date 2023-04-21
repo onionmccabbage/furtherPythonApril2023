@@ -27,8 +27,11 @@ def myServer():
         # in this server, we will simply echo back the sme buffer as CAPS
         # response_text = buffer.upper()
         url_template = f'http://api.openweathermap.org/data/2.5/weather?q={buffer}&units=metric&APPID=48f2d5e18b0d2bc50519b58cce6409f1'
+        print(f'Server is trying URL {url_template}')
+
         response = requests.get(url_template)
         data = response.json()
+        print(f'Server received {data}')
         # description = data['weather'][0]['description']
         client.send('got weather')
         if buffer == b'quit':

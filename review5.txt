@@ -1,0 +1,29 @@
+Review Exercise: Microservices
+==============================
+Write a microservice that uses 'socket' (write a new one or extend the existing one)
+Respond to requests as follows:
+If the request is 'people', 'planets' or 'species' then
+make a call (using the requests library) to https://swapi.dev/api/<category>/1 
+(where category is one of the above)
+When the data comes back, find just the 'name' value and return that to the client
+(NB you will need to add an id to the end as shown above)
+
+If the request can be cast as an integer, make a request to
+  https://swapi.dev/api/people/<int>
+then return some details of that person to the client
+
+Write a client that sends suitable requests and displays the received server response
+Consider how the server could 'parse' the request to find a category and an id, then use those to return data
+
+Alternative Exercise
+====================
+Continue with our Flask server. Add routes for:
+'/weather/<city>'
+  make a call to your weather service and return a nice weather report
+'/swapi/<category>/<id>
+  make a call to swapi and return some data
+
+Optional
+========
+Add a path to the Flask server which makes a call to your microservice
+
