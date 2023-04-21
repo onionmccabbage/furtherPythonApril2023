@@ -67,7 +67,7 @@ Thursday
 > handling files and remote data
 > after lunch review exercise
 - careful - exporting a notebook does not add 'print' statements
-- AI or machine learning
+ 	 
 
 Friday
 - show fixed 2x2 plot grid
