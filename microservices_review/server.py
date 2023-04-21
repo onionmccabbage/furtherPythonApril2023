@@ -30,6 +30,8 @@ def myServer():
             url = 'https://swapi.dev/api/planets/1'
         elif buf ==b'species':
             url = 'https://swapi.dev/api/species/1'
+        elif buf ==b'starships':
+            url = 'https://swapi.dev/api/starships/1'
         else:
             # did the client send an integer value?
             try:

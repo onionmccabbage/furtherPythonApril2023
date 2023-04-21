@@ -65,9 +65,9 @@ def weather(city='Athlone'):
 
 @app.route('/swapi')
 def swapi():
+    # CAREFUL unusually, swapi does NOT support www.
     r = requests.get('https://swapi.dev/api/people/1')
     response_dict = r.json()
-    # response_json = json.dumps(response_dict)
     name = response_dict['name']
     return name
 
