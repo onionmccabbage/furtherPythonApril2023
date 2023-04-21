@@ -6,6 +6,7 @@ from flask import Flask # may need to pip isntall flask
 from flask import render_template
 
 from weather import getWeather 
+import requests
 
 #we bgin by making a flask serve instance
 app = Flask(__name__) # by convention name flask this way
@@ -61,6 +62,14 @@ def weather(city='Athlone'):
     # call our weather service
     w = getWeather(city)
     return w.encode()
+
+@app.route('/swapi')
+def swapi():
+    r = requests.get('https://swapi.dev/api/people/1')
+    response_dict = r.json()
+    # response_json = json.dumps(response_dict)
+    name = response_dict['name']
+    return name
 
 if __name__ == '__main__':
     # debug will let us live reload when changes occur. Also debug will give detailed messages
