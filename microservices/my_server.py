@@ -4,6 +4,8 @@
 # we often think of microservices as APIs
 
 import socket # this will provide a means for services to interact
+import requests
+
 
 def myServer():
     '''this microservice will receive requests from clients'''
@@ -14,6 +16,8 @@ def myServer():
     # begin listening for requests
     server.listen(6)
     print(f'Server is listening on {param_t[0]}:{param_t[1]}')
+    # an external API end-point
+
     #run the server continously
     while True:
         # begin accepting requests
@@ -21,8 +25,12 @@ def myServer():
         buffer = client.recv(1024) # read the first 1024 bytes from the request
         print(f'Server received {buffer}')
         # in this server, we will simply echo back the sme buffer as CAPS
-        response_text = buffer.upper()
-        client.send(response_text)
+        # response_text = buffer.upper()
+        url_template = f'http://api.openweathermap.org/data/2.5/weather?q={buffer}&units=metric&APPID=48f2d5e18b0d2bc50519b58cce6409f1'
+        response = requests.get(url_template)
+        data = response.json()
+        # description = data['weather'][0]['description']
+        client.send('got weather')
         if buffer == b'quit':
             break
 
