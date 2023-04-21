@@ -24,17 +24,16 @@ def myServer():
         (client, addr) = server.accept() # unpack the request into client and adress
         buffer = client.recv(1024) # read the first 1024 bytes from the request
         buf_str = buffer.decode()
-        print(f'Server received {buf_str}')
+        print(f'Server received {buffer}')
         # in this server, we will simply echo back the sme buffer as CAPS
         # response_text = buffer.upper()
         url_template = f'http://api.openweathermap.org/data/2.5/weather?q={buf_str}&units=metric&APPID=48f2d5e18b0d2bc50519b58cce6409f1'
         print(f'Server is trying URL {url_template}')
-
         response = requests.get(url_template)
         data = response.json()
         print(f'Server received {data}')
-        # description = data['weather'][0]['description']
-        client.send('got weather')
+        description = data['weather'][0]['description']
+        client.send(description.encode())
         if buffer == b'quit':
             break
 

@@ -1,4 +1,4 @@
-Review Exercise: Microservices
+Review Exercise: Microservices (1hr 20 until tea break at 3:00)
 ==============================
 Write a microservice that uses 'socket' (write a new one or extend the existing one)
 Respond to requests as follows:

@@ -18,7 +18,7 @@ def myClient(city):
     sock.close()
 
 if __name__ == '__main__':
-    # for city in cities:
-    city = b'athlone'
-    t = Thread(target=myClient, args=(city,))
-    t.start()
+    for city in cities:
+        t = Thread(target=myClient, args=(city,))
+        t.start()
+        t.join()

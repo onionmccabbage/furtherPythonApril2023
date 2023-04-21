@@ -5,6 +5,8 @@
 from flask import Flask # may need to pip isntall flask
 from flask import render_template
 
+from weather import getWeather 
+
 #we bgin by making a flask serve instance
 app = Flask(__name__) # by convention name flask this way
 
@@ -53,6 +55,12 @@ def menu():
 @app.route('/lunch/<desert>') # this is a REST url - we REpresent the STate of the data
 def lunch(desert=None):
     return render_template('lunch.html', desert=desert)
+
+@app.route('/weather/<city>')
+def weather(city='Athlone'):
+    # call our weather service
+    w = getWeather(city)
+    return w.encode()
 
 if __name__ == '__main__':
     # debug will let us live reload when changes occur. Also debug will give detailed messages
