@@ -50,10 +50,9 @@ def menu():
     return f'{link1} | {link2} | {link3} | {link4}'
 # using templates for the HTML
 @app.route('/lunch')
-@app.route('/lunch/<desert>')
+@app.route('/lunch/<desert>') # this is a REST url - we REpresent the STate of the data
 def lunch(desert=None):
     return render_template('lunch.html', desert=desert)
-
 
 if __name__ == '__main__':
     # debug will let us live reload when changes occur. Also debug will give detailed messages

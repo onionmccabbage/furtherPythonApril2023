@@ -70,8 +70,8 @@ Thursday
 
 Friday
 > show fixed 2x2 plot grid
-- review of microservices
-- Flask: running as dev or prod server (performance and security)
+> review of microservices
+> Flask: running as dev or prod server (performance and security)
   to run as a debug server: flask --app my_flask.py --debug run
   or else debug=True in the app declaration
   see https://flask.palletsprojects.com/en/2.2.x/
