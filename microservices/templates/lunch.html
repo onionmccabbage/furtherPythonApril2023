@@ -17,6 +17,14 @@
                 <li>Aubergine</li>
                 <li>Wraps</li>
             </ul>
+            <aside>
+                <!-- Flask has a micro-syntax for templates -->
+                {% if desert != None %}
+                <p>for desert we have {{desert}}</p>
+                {% else %}
+                <p>There is no desert today</p>
+                {% endif %}
+            </aside>
         </section>
     </article>
 </body>

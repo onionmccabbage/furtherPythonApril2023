@@ -49,6 +49,10 @@ def menu():
     link4 = '<a href="/map">Map</a>'
     return f'{link1} | {link2} | {link3} | {link4}'
 # using templates for the HTML
+@app.route('/lunch')
+@app.route('/lunch/<desert>')
+def lunch(desert=None):
+    return render_template('lunch.html', desert=desert)
 
 
 if __name__ == '__main__':
