@@ -39,12 +39,16 @@ def greet(name=None, sname=None):
             return f'<h3>Greetings {name}</h3>'
     else:
         return '<h3>Greetings</h3>'
-
-
-# using tempaltes for the HTML
-
-
-
+    
+# a menu of links
+@app.route('/menu')
+def menu():
+    link1 = '<a href="/">Home</a>'
+    link2 = '<a href="/about">About</a>'
+    link3 = '<a href="/greet">Greet</a>'
+    link4 = '<a href="/map">Map</a>'
+    return f'{link1} | {link2} | {link3} | {link4}'
+# using templates for the HTML
 
 
 if __name__ == '__main__':
