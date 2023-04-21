@@ -18,10 +18,11 @@ Consider how the server could 'parse' the request to find a category and an id, 
 Alternative Exercise
 ====================
 Continue with our Flask server. Add routes for:
-'/weather/<city>'
-  make a call to your weather service and return a nice weather report
 '/swapi/<category>/<id>
   make a call to swapi and return some data
+if time, also implement
+'/weather/<city>'
+  make a call to your weather service and return a nice weather report
 
 Optional
 ========
