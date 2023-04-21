@@ -7,8 +7,8 @@ def myClient():
     param_t = ('localhost', 9876) # IP and port
     sock.connect(param_t)
     # message to send to the server
-    message = 'default message'
-    sock.send(message)
+    message = 'quit'
+    sock.send(message.encode()) # we must send bytes
     # is there a response from the server?
     response = sock.recv(1024)
     print(f'client received {response}')
