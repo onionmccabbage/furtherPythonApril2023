@@ -1,5 +1,6 @@
 import sys
 import socket
+from threading import Thread
 
 def myClient():
     '''this client will make requests to our server'''
@@ -15,4 +16,6 @@ def myClient():
     sock.close()
 
 if __name__ == '__main__':
-    myClient()
+    for _ in range(0,12):
+        t = Thread(target=myClient())
+        t.start()
